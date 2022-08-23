@@ -49,8 +49,8 @@ def newController():
 def printMenu():
     print("Opciones:")
     print("1- Cargar Libros")
-    print("2- Cargar Tags")
-    # TODO: Modificaciones lab 1, agregar opcion 3.
+    print("2- Cargar Tags") 
+    print("3- Cargar L")
     print("0- Salir")
 
 
@@ -100,9 +100,10 @@ while True:
         tags = loadTags(control)
         print("Total de tags cargados: " + str(tags))
 
-    # TODO: Modificaciones lab 1, agregar la opcion 3, ladBookTags().
     elif int(inputs[0]) == 3:
-        pass
+        print("Cargando información de libros con tags....")
+        book_tags = loadBooksTags(control)
+        print("Total de libros con tags cargados: " + str(book_tags))
 
     else:
         sys.exit(0)
